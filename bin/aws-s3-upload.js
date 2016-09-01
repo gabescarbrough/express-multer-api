@@ -14,6 +14,7 @@ let file = {
 let stream = fs.createReadStream(file.path);
 
 const params = {
+  ACL: 'public-read',
   Bucket: process.env.AWS_S3_BUCKET_NAME,
   Key: 'key1',
   Body: stream,
